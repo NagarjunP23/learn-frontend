@@ -1,0 +1,165 @@
+/* 1 - BASE FORM STYLES */
+
+body{
+    background: #141414;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background: #0d0d0d;
+    padding: 20px;
+    text-align: center;
+}
+form{
+    margin: 20px;
+    color: #eee;
+}
+form p{
+    font-size: 18px;
+    letter-spacing: 0.1em;
+}
+
+/*2 - RADIO BOX STYLES*/
+
+input[type="radio"]{     /* Removes the radio box */
+    opacity: 0;
+    margin: 0;
+    width: 0;
+}
+
+label[for="male"], label[for="female"]{
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-left: 26px;
+    background: url(img/checks.png) no-repeat;
+    background-position: 0 -32px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+input:checked + label[for="male"],    /* If Radio is checked and has a label of male */
+input:checked + label[for="female"]{   /* If Radio is checked and has a label of female */
+    background-position: 0  0;
+    color: #ce1010;
+}
+
+/* 3 - CHECKBOX STYLES  */
+
+input[type="checkbox"]{     /* Removes the check box */
+    opacity: 0;
+    margin: 0;
+    width: 0;
+}
+
+label[for="web"], label[for="photoshop"], label[for="madona"]{
+
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-left: 26px;
+    background: url(img/checks.png) no-repeat;
+    background-position: 0 -98px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+input:checked + label[for="web"],
+input:checked + label[for="photoshop"],
+input:checked + label[for="madona"]{
+
+    background-position: 0  -65px;
+    color: #ce1010;
+
+}
+
+/* 4 - TEXT INPUT STYLES & FIELDSETS */
+
+fieldset{
+    padding: 20px;
+    margin: 20px 0;
+    border: 3px solid #222;
+}
+
+legend{
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+}
+input[type="email"],input[type="telephone"]{
+
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 10px 10px 50px;
+    border: 0;
+    border-radius: 4px;
+    background: url(img/inputs.png) no-repeat;
+    background-color: #222;
+    font-size: 16px;
+    color: #fff;
+    float: left;    /*float to place it left to tick  */
+    clear: both;    /*to keep in diff line or else they will be in same line*/
+}
+
+input[type="email"]{
+    background-position: 7px 8px;
+}
+input[type="telephone"]{
+    background-position: 7px -58px;
+}
+
+
+/* 5 - SELECT BOXES */
+
+select{                    /* TO remove default select dropdown arrow from chrome, mozilla, opera, msft*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+
+    display: block;
+    margin: 30px 0;
+    padding: 10px 50px 10px 10px;
+    background: url(img/select.png) no-repeat 95% center;
+    background-color: #222;
+    color: #fff;
+    border: 2px solid white;
+    border-radius: 4px;
+    width: 280px;
+}
+input[type="submit"]{
+    background: #b61111;
+    padding: 15px;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    border: 0;
+    width: 280px;
+}
+
+
+/* 6 - INPUT VALIDATION STYLES */
+
+input[type="email"]:valid,
+input[type="telephone"]:valid{
+    border: 2px solid #fff;
+}
+input[type="email"]:valid{
+    background-position: 7px -22px;
+}
+input[type="telephone"]:valid{
+    background-position: 7px -97px;
+}
+input[type="email"]:valid + .tick,
+input[type="telephone"]:valid + .tick{
+    background: url(img/tick.png);
+    background-size: 100%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    float: left;   
+    margin: 10px;
+}
+
+
+
